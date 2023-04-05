@@ -2,33 +2,37 @@
 
 ## Introduction
 
-A project in which an economic bot was developed specifically for your server. It contains various functions for building an economy on your server.
+A project in which an economic bot was developed specifically for your discord server. It contains various functions for building an economy on your server.
 
 ![Introduction](https://i.pinimg.com/originals/74/5c/c9/745cc90fcc688569610f84bc5d2b2fd6.gif)"
 
-## Techs
+## Technologies were used in this project:
 
-Confome desenvolvemos o projeto, atualizar quais tecnologias estamos utilizando
+* [Python] (https://www.python.org /): a simple syntactic programming language;
+* [SQLite] (https://sqlite.org/index.html ): SQLite is a software library that provides a relational database management system. It is a serverless, self-contained SQL database engine with zero configuration and transactions. SQLite is widely used in various applications due to its compact size, low maintenance costs and ease of use;
+* [Discord Developer Portal] (https://discord.com/developers/applications ): website for registering your application;
+* [Discord.py ] (https://discord py.readthedocs.io/en/latest /): library for integration with discord;
 
-* [Python](https://www.python.org/): Linguagem de programação de sintaxe simples;
-* [Mongodb](https://www.mongodb.com/): Bando de dados não relacional para armazenamento de informações, está sendo utilizado o banco diretamente no site;
-* [Discord Developer Portal](https://discord.com/developers/applications): site para registrar sua aplicação/bot;
-* [Discord.py](https://discordpy.readthedocs.io/en/latest/): Biblioteca para integração com o discord;
+## Requirement
 
-## Requisitos
+* To have Python version 3.11.3 installed (during development we started with version 3.11.3, so we cannot guarantee that earlier versions will work);
+* Create a .env file, fill it with the following data:
 
-* Ter instalado Python na versão 3.5 (durante o desenvolvimento, começamos na versão 3.5, então não podemos garantir que versões anteriores funcionem);
-* Crie um arquivo Token.py, preencha com os seguintes dados:
 ```py
-class TokenDiscord:
-  def uploadToken():
-    return {
-      "database": "Link de conexão ao mongodb",
-      "idapresentacao":"é um long que representa o id de um dos canais onde vai ter pontos por reações",
-      "idaviso":"é um long que representa o id de um dos canais onde vai ter pontos por reações",
-      "token":"token de acesso do bot, gerado no site do Discord Developer Portal"
-    }
+TOKEN = "" Bot Token
+NAME = "" Bot Name
+ID = "" Client ID(App)
+PREFIX = "!" Prefix (To call the command)
+```
+* or we can change the config file and enter this data here:
 
+```py
+setting = {
+    'TOKEN' : "",
+    'NAME BOT' : "",
+    'ID'       : "",
+    'PREFIX'   : ""
+}
 ```
 
 ## GAMIFICAÇÃO
