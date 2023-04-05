@@ -16,12 +16,16 @@ from random import randint
 from numpy import append
 from PIL import*
 from discord import File
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 setting = {
-    'TOKEN' : 'MTA5MzExNDUzMjAwOTg2OTQxMg.GSP5il.opL6bEli9jBmc1an13waQFpyQNqWLVjt58GODQ',
-    'NAME BOT' : 'akiroqw',
-    'ID'       : '1093114532009869412',
-    'PREFIX'   : '!'
+    'TOKEN' : os.environ.get("TOKEN"),
+    'NAME BOT' : os.environ.get("NAME"),
+    'ID'       : os.environ.get("ID"),
+    'PREFIX'   : os.environ.get("PREFIX")
 }
 
 
@@ -29,7 +33,6 @@ collecting_roles = {"Administrator" : 250000,
                     "Moderator" : 12323,
                     "G. Administrator": 123
 }
-
 
 text_work = {1: 'None',
              2: 'None2',
