@@ -1,4 +1,8 @@
 from config import*
+from lib.easy_pil import editor
+from lib.easy_pil.canvas import Canvas
+from lib.easy_pil.font import Font
+from lib.easy_pil.utils import load_image_async
 
 class LevelCard():
 
@@ -13,15 +17,15 @@ class LevelCard():
 
     async def create(self):
         if self.path != None:
-            background = Editor(Canvas((920, 220), color= "#141414"))
-            banner = Editor(f"backgrounds/{self.path}").resize((920, 900))
+            background = editor(Canvas((920, 220), color= "#141414"))
+            banner = editor.Editor(f"{self.path}").resize((920, 900))
             background.paste(banner, (0, -150)).blur('gussian', 5)
         else:
-            background = Editor(Canvas((920, 220), color= "#141414"))
+            background = editor.Editor(Canvas((920, 220), color= "#141414"))
 
         if(self.avatar != None):
             profile = await load_image_async(str(self.avatar))
-            profile = Editor(profile).resize((150, 150)).circle_image()
+            profile = editor.Editor(profile).resize((150, 150)).circle_image()
             background.paste(profile.image, (30, 40))
         else:
             pass

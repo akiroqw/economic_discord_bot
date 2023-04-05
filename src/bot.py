@@ -2,7 +2,6 @@ from config import*
 from levelcard import*
 from page_class import*
 
-
 class Bot:
 
     def start(self, token):
@@ -202,6 +201,7 @@ class Bot:
                     emb.add_field(name="Status:", value=ctx.message.author.activity,inline=False)
                     emb.add_field(name="Account has been created:", value=member.created_at.strftime("%a, %#d %B %Y, %I:%M %p UTC"),inline=False)
                     emb.set_thumbnail(url=member.avatar.url)
+                    emb.add_field(name="Commands:", value=status,inline=False)
                     await ctx.send(embed = emb)
 
     def add_shop_event(self):

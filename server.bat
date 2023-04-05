@@ -1,4 +1,4 @@
 @echo off
 
-python bot.py
+python src/bot.py
 pause
