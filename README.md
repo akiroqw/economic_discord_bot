@@ -22,14 +22,14 @@ A project in which an economic bot was developed specifically for your discord s
 * Сreate a bot and take a token, along with the client's ID (https://discord.com/developers/applications)
 * Clone repository
 ```
-$ git clone 
+$ git clone https://github.com/akiroqw/DiscordBot.git
 $ cd AkiroDiscordBot
 ```
 * Install the necessary libraries using the requirements.txt
 ```
 $ pip install -r requirements.txt
 ```
-* 
+* Create a file .env in the src folder where the token, client id will be located
 ```py
 TOKEN = "" Bot Token
 NAME = "" Bot Name
@@ -37,7 +37,6 @@ ID = "" Client ID(App)
 PREFIX = "!" Prefix (To call the command)
 ```
 * or we can change the config file and enter this data here:
-
 ```py
 setting = {
     'TOKEN' : "",
@@ -46,7 +45,6 @@ setting = {
     'PREFIX'   : ""
 }
 ```
-
 ## Bot system
 
 The bot system is implemented using 2 types, experience and levels, experience is accrued weekly, or for chatting. The bot also has a system of economy, shop, jackets, salaries and profiles
@@ -58,7 +56,6 @@ bot.member_join_event() // Event triggered when a new user joins the server.
 bot.commands_error_event() // Event triggered when an error occurs in a command.
 bot.on_message_event() // Event triggered when a message is received on the server.
 ```
-
 ## Various configs
 
 To specify which roles will be served when using the `bot.collect_event(collecting_roles, 0, 0):` method, you need to specify the name of the role here, and the amount how much users will receive from this role.
