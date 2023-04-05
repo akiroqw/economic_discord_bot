@@ -82,25 +82,14 @@ A command is an instruction given to the bot to perform a certain function or ac
 client = commands.Bot(command_prefix = setting['PREFIX'], intents = discord.Intents.all())
 client.remove_command('help')
 ```
-To use a command, type the prefix followed by the command name. For example, to use the 'help' command, type '{setting['PREFIX']}help' in the chat. The bot comes with a few pre-built commands, such as 'help' and 'ping'. However, it is also possible to create custom commands using Python code. To add a custom command, define a function that performs the desired action and use the '@client.command()' decorator above it. For instance, to create a command that sends a greeting message, you can define a function as follows:
+To use a command, enter a prefix followed by the name of the command. For example, to use the "info" command, type "{setup['PREFIX']}info" in the chat. However, it is also possible to create custom commands. To add a custom command, define the function that performs the desired action and use the decorator '@client.command()' over it. For example, to create a command that sends a welcome message, you can define a function as follows:
 
 ```py
 @client.command()
 async def greet(ctx):
     await ctx.send('Hello there!')
 ```
-
-This will create a new command called 'greet', which will send the message 'Hello there!' in the chat whenever it is used. In addition to creating custom commands, it is also possible to modify or remove pre-built commands using the '@client.command()' decorator. For instance, to modify the 'help' command, you can define a new function with the same name and use the decorator above it.
-
-```py
-@client.command()
-async def help(ctx):
-    await ctx.send('This is a custom help message!')
-
-```
-
-This will overwrite the original 'help' command and make it send the new message instead.
-Overall, commands are a powerful tool that allow you to control and customize the behavior of your bot. With a bit of Python code and some creativity, you can create a wide range of custom commands to suit your needs.
+You can expand the functionality of the bot, add or remove new functions. But, you need to be careful. Some functions depend on others:)
 
 Overall, an economic bot is a great way to add an extra level of engagement to your server. This is a fun way for participants to interact with each other and fosters a sense of community. If you are looking for a way to increase the engagement of your Discord server, then the Akira economic bot is definitely worth considering!!!
 
