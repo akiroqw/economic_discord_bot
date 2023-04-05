@@ -14,9 +14,7 @@ A project in which an economic bot was developed specifically for your discord s
 * [Discord.py ] (https://discord py.readthedocs.io/en/latest): library for integration with discord;
 
 ## Requirement
-
 * To have Python version 3.11.3 installed (during development we started with version 3.11.3, so we cannot guarantee that earlier versions will work);
-* Create a .env file, fill it with the following data:
 
 ## Installation
 * Сreate a bot and take a token, along with the client's ID (https://discord.com/developers/applications)
@@ -29,7 +27,7 @@ $ cd AkiroDiscordBot
 ```
 $ pip install -r requirements.txt
 ```
-* Create a file .env in the src folder where the token, client id will be located
+* Create a new file .env in the src folder where the token, client id will be located
 ```py
 TOKEN = "" Bot Token
 NAME = "" Bot Name
