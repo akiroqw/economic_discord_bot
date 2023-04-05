@@ -4,7 +4,7 @@
 
 A project in which an economic bot was developed specifically for your server. It contains various functions for building an economy on your server.
 
-<img src="[/assets/gif_balle_bot.gif](https://i.pinimg.com/originals/74/5c/c9/745cc90fcc688569610f84bc5d2b2fd6.gif)" >
+![Introduction](https://i.pinimg.com/originals/74/5c/c9/745cc90fcc688569610f84bc5d2b2fd6.gif)"
 
 ## Techs
 
