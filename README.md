@@ -41,35 +41,43 @@ The bot system is implemented using 2 types, experience and levels, experience i
 
 ## Basic bot commands
 
-```py
-bot.bot_ready_event() // Event triggered when the bot starts.
-bot.member_join_event() // Event triggered when a new user joins the server.
-bot.balance_event() //Event triggered to get a user's balance.
-bot.give_event() // Event triggered to give money to a user.
-bot.remove_bal_event() // Event triggered to remove money from a user.
-bot.info_event() // Event triggered to get information about a user.
-bot.add_shop_event() // Event triggered to add an item to the shop.
-bot.remove_shop_event() // Event triggered to remove an item from the shop.
-bot.shop_event() // Event triggered to view items in the shop.
-bot.buy_event() // Event triggered to buy an item from the shop.
-bot.set_money_event() // Event triggered to set a user's balance.
-bot.commands_error_event() // Event triggered when an error occurs in a command.
-bot.clear_event() // Event triggered to clear the chat.
-bot.inventory_event() // Event triggered to view a user's inventory.
-bot.use_event() // Event triggered to use an item from the inventory.
-bot.roll_event() // Event triggered to roll a dice.
-bot.avatar_event() // Event triggered to change a user's avatar.
-bot.collect_event(collecting_roles, 0, 0) // Event triggered to collect funds from users with a specific role.
-bot.work_event(70000, 100000, text_work, 0, 0) // Event triggered for a user to perform a job.
-bot.remove_all_inventory() // Event triggered to remove all items from a user's inventory.
-bot.remove_all_balance() // Event triggered to remove all money from a user.
-bot.remove_all_roles() // Event triggered to remove all roles from a user.
-bot.wipe_event() // Event triggered to wipe all bot data.
-bot.banner_event() // Event triggered to set a banner on the server.
-bot.level_event() // Event triggered to get a user's level.
-bot.on_message_event() // Event triggered when a message is received on the server.
-bot.set_xp_event() // Event triggered to set a user's experience.
-```
+### Evens
+* bot.bot_ready_event() // Event triggered when the bot starts.
+* bot.member_join_event() // Event triggered when a new user joins the server.
+* bot.commands_error_event() // Event triggered when an error occurs in a command.
+* bot.on_message_event() // Event triggered when a message is received on the server.
+
+### Balance
+* bot.balance_event() //Event triggered to get a user's balance.
+* bot.give_event() // Event triggered to give money to a user.
+* bot.remove_bal_event() // Event triggered to remove money from a user.
+* bot.set_money_event() // Event triggered to set a user's balance.
+
+### Shop
+* bot.add_shop_event() // Event triggered to add an item to the shop.
+* bot.remove_shop_event() // Event triggered to remove an item from the shop.
+* bot.shop_event() // Event triggered to view items in the shop.
+* bot.buy_event() // Event triggered to buy an item from the shop.
+
+### Inventory
+* bot.inventory_event() // Event triggered to view a user's inventory.
+* bot.use_event() // Event triggered to use an item from the inventory.
+* bot.remove_all_inventory() // Event triggered to remove all items from a user's inventory.
+
+### Other
+
+* bot.info_event() // Event triggered to get information about a user.
+* bot.clear_event() // Event triggered to clear the chat.
+* bot.roll_event() // Event triggered to roll a dice.
+* bot.avatar_event() // Event triggered to change a user's avatar.
+* bot.collect_event(collecting_roles, 0, 0) // Event triggered to collect funds from users with a specific role.
+* bot.work_event(70000, 100000, text_work, 0, 0) // Event triggered for a user to perform a job.
+* bot.remove_all_balance() // Event triggered to remove all money from a user.
+* bot.remove_all_roles() // Event triggered to remove all roles from a user.
+* bot.wipe_event() // Event triggered to wipe all bot data.
+* bot.banner_event() // Event triggered to set a banner on the server.
+* bot.level_event() // Event triggered to get a user's level.
+* bot.set_xp_event() // Event triggered to set a user's experience.
 
 #### pymongo operações
 
