@@ -79,33 +79,30 @@ The bot system is implemented using 2 types, experience and levels, experience i
 * bot.level_event() // Event triggered to get a user's level.
 * bot.set_xp_event() // Event triggered to set a user's experience.
 
-#### pymongo operações
+#### Various configs
 
-Essas informações que estão sendo mostradas é apenas para enteder como deve ser utilizado o pymongo
+To specify which roles will be served when using the `bot.collect_event(collecting_roles, 0, 0):` method, you need to specify the name of the role here, and the amount how much users will receive from this role.
 
-* **Insert**
 ```py
-data = {
-  'nome': 'Jef',
-  'idade': 45
+collecting_roles = {"Administrator" : 250000,
+                    "Moderator" : 12323,
+                    "G. Administrator": 123
+}
+```
+To specify which words will be output when displaying the work message when we use the command `not.work_event(70000, 100000, text_work, 0, 0):`, we need to replace the following elements:
+
+```py
+text_work = {1: 'None', //1st option, other...
+             2: 'None2', 
+             3: 'None3'}
 }
 
-responseData = collection.insert_one(data)
-# responseData é do tipo InsertOneResult, só vi que tem o inserted_id até agora
 ```
-[Infos sobre InsertOneResult](https://pymongo.readthedocs.io/en/stable/api/pymongo/results.html#pymongo.results.InsertOneResult)
 
-* **Replace**
-```py
-data = {
-  'nome': 'Jef',
-  'idade': 45
-}
+Description of the methods themselves: 
+`bot.collect_event(collecting_roles, 0, 0):` - 1 argument takes the mapping, 2 and 3 are the time interval
+`not.work_event(70000, 100000, text_work, 0, 0):`- 1 and 2 arguments take int values, this is the range of random salary for work. 3 argument accepts mappings for phrases, 4-5 time range
 
-responseData = collection.replace_one({'nome': 'Mateus'}, data)
-# responseData é do tipo UpdateResult, só vi que tem matched_count,modified_count e upserted_id de informações relevantes
-```
-[Infos sobre UpdateResult](https://pymongo.readthedocs.io/en/stable/api/pymongo/results.html#pymongo.results.UpdateResult)
 
 * **Update**
 ```py
