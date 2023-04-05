@@ -40,10 +40,12 @@ setting = {
 The bot system is implemented using 2 types, experience and levels, experience is accrued weekly, or for chatting. The bot also has a system of economy, shop, jackets, salaries and profiles
 
 ### Bot events
-* bot.bot_ready_event() // Event triggered when the bot starts.
-* bot.member_join_event() // Event triggered when a new user joins the server.
-* bot.commands_error_event() // Event triggered when an error occurs in a command.
-* bot.on_message_event() // Event triggered when a message is received on the server.
+```py
+bot.bot_ready_event() // Event triggered when the bot starts.
+bot.member_join_event() // Event triggered when a new user joins the server.
+bot.commands_error_event() // Event triggered when an error occurs in a command.
+bot.on_message_event() // Event triggered when a message is received on the server.
+```
 
 #### Various configs
 
@@ -69,35 +71,37 @@ Description of the methods themselves:
 `bot.collect_event(collecting_roles, 0, 0):` - 1 argument takes the mapping, 2 and 3 are the time interval
 `not.work_event(70000, 100000, text_work, 0, 0):`- 1 and 2 arguments take int values, this is the range of random salary for work. 3 argument accepts mappings for phrases, 4-5 time range
 
-
-* **Update**
+* **Connecting the Database**
 ```py
-
-responseData = collection.update_one({'nome': 'Mateus'}, {'$inc': {'idade': 2}}, upsert)
-# responseData é do tipo UpdateResult, só vi que tem matched_count,modified_count e upserted_id de informações relevantes
-# incrementa o valor idade em 2
-# upsert é um valor booleano, que vai definir se é necessário inserir o objeto ou não
+connection = sqlite3.connect('src\data\server.db') //path to the uploaded database file
+cursor = connection.cursor()
 ```
-[Infos sobre UpdateResult](https://pymongo.readthedocs.io/en/stable/api/pymongo/results.html#pymongo.results.UpdateResult)
-* Outros operadores interessantes:
-  * $set: vai definir um valor específico
-  * $mul: vai múltiplicar a propriedade pelo valor especificado
-  * $rename: vai trocar o campo
-  * $setOnInsert: se a query não resultar em nada, e o objeto tiver que ser inserido, adiciona os campos
-  * $unset: remove o campo
-* Para arrays:
-  * $: atualiza o primeiro que encontrar na condição
-  * $[]: atualiza todos os elementos encontrados
-  * $[\<identifiers\>]: atualiza todos que combinarem com a condição dentro do parênteses
 
-[Infos sobre Update Operators](https://docs.mongodb.com/manual/reference/operator/update/#std-label-update-operators)
-
-
-* **update_many**
+* A command is an instruction given to the bot to perform a certain function or action. The prefix for a command in this bot is '{setting['PREFIX']}'.
 ```py
-responseData = collection.update_many(
-    {'valor': 10}, {'$set': {'teste2':'novo'}})
-# procura todo lugar onde valor é igual a 10, e altera/adiciona o campo teste2 = novo
+client = commands.Bot(command_prefix = setting['PREFIX'], intents = discord.Intents.all())
+client.remove_command('help')
 ```
-[Infos sobre UpdateResult](https://pymongo.readthedocs.io/en/stable/api/pymongo/results.html#pymongo.results.UpdateResult)
+*To use a command, type the prefix followed by the command name. For example, to use the 'help' command, type '{setting['PREFIX']}help' in the chat. The bot comes with a few pre-built commands, such as 'help' and 'ping'. However, it is also possible to create custom commands using Python code. To add a custom command, define a function that performs the desired action and use the '@client.command()' decorator above it. For instance, to create a command that sends a greeting message, you can define a function as follows:
+
+```py
+@client.command()
+async def greet(ctx):
+    await ctx.send('Hello there!')
+```
+
+* This will create a new command called 'greet', which will send the message 'Hello there!' in the chat whenever it is used.
+In addition to creating custom commands, it is also possible to modify or remove pre-built commands using the '@client.command()' decorator. For instance, to modify the 'help' command, you can define a new function with the same name and use the decorator above it.
+
+```py
+@client.command()
+async def help(ctx):
+    await ctx.send('This is a custom help message!')
+
+```
+
+This will overwrite the original 'help' command and make it send the new message instead.
+Overall, commands are a powerful tool that allow you to control and customize the behavior of your bot. With a bit of Python code and some creativity, you can create a wide range of custom commands to suit your needs.
+
+Overall, an economic bot is a great way to add an extra level of engagement to your server. This is a fun way for participants to interact with each other and fosters a sense of community. If you are looking for a way to increase the engagement of your Discord server, then the Akira economic bot is definitely worth considering.
 
