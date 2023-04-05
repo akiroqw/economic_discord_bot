@@ -39,7 +39,7 @@ setting = {
 
 The bot system is implemented using 2 types, experience and levels, experience is accrued weekly, or for chatting. The bot also has a system of economy, shop, jackets, salaries and profiles
 
-### Bot events
+## Bot events
 ```py
 bot.bot_ready_event() // Event triggered when the bot starts.
 bot.member_join_event() // Event triggered when a new user joins the server.
@@ -47,7 +47,7 @@ bot.commands_error_event() // Event triggered when an error occurs in a command.
 bot.on_message_event() // Event triggered when a message is received on the server.
 ```
 
-#### Various configs
+## Various configs
 
 To specify which roles will be served when using the `bot.collect_event(collecting_roles, 0, 0):` method, you need to specify the name of the role here, and the amount how much users will receive from this role.
 
@@ -71,18 +71,18 @@ Description of the methods themselves:
 `bot.collect_event(collecting_roles, 0, 0):` - 1 argument takes the mapping, 2 and 3 are the time interval
 `not.work_event(70000, 100000, text_work, 0, 0):`- 1 and 2 arguments take int values, this is the range of random salary for work. 3 argument accepts mappings for phrases, 4-5 time range
 
-* **Connecting the Database** *
+* **Connecting the Database**
 ```py
 connection = sqlite3.connect('src\data\server.db') //path to the uploaded database file
 cursor = connection.cursor()
 ```
 
-* A command is an instruction given to the bot to perform a certain function or action. The prefix for a command in this bot is '{setting['PREFIX']}'.
+A command is an instruction given to the bot to perform a certain function or action. The prefix for a command in this bot is '{setting['PREFIX']}'.
 ```py
 client = commands.Bot(command_prefix = setting['PREFIX'], intents = discord.Intents.all())
 client.remove_command('help')
 ```
-*To use a command, type the prefix followed by the command name. For example, to use the 'help' command, type '{setting['PREFIX']}help' in the chat. The bot comes with a few pre-built commands, such as 'help' and 'ping'. However, it is also possible to create custom commands using Python code. To add a custom command, define a function that performs the desired action and use the '@client.command()' decorator above it. For instance, to create a command that sends a greeting message, you can define a function as follows:
+To use a command, type the prefix followed by the command name. For example, to use the 'help' command, type '{setting['PREFIX']}help' in the chat. The bot comes with a few pre-built commands, such as 'help' and 'ping'. However, it is also possible to create custom commands using Python code. To add a custom command, define a function that performs the desired action and use the '@client.command()' decorator above it. For instance, to create a command that sends a greeting message, you can define a function as follows:
 
 ```py
 @client.command()
@@ -90,7 +90,7 @@ async def greet(ctx):
     await ctx.send('Hello there!')
 ```
 
-*This will create a new command called 'greet', which will send the message 'Hello there!' in the chat whenever it is used. In addition to creating custom commands, it is also possible to modify or remove pre-built commands using the '@client.command()' decorator. For instance, to modify the 'help' command, you can define a new function with the same name and use the decorator above it.
+This will create a new command called 'greet', which will send the message 'Hello there!' in the chat whenever it is used. In addition to creating custom commands, it is also possible to modify or remove pre-built commands using the '@client.command()' decorator. For instance, to modify the 'help' command, you can define a new function with the same name and use the decorator above it.
 
 ```py
 @client.command()
