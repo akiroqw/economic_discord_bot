@@ -71,7 +71,7 @@ Description of the methods themselves:
 `bot.collect_event(collecting_roles, 0, 0):` - 1 argument takes the mapping, 2 and 3 are the time interval
 `not.work_event(70000, 100000, text_work, 0, 0):`- 1 and 2 arguments take int values, this is the range of random salary for work. 3 argument accepts mappings for phrases, 4-5 time range
 
-* **Connecting the Database**
+## Connecting the Database
 ```py
 connection = sqlite3.connect('src\data\server.db') //path to the uploaded database file
 cursor = connection.cursor()
