@@ -8,10 +8,10 @@ A project in which an economic bot was developed specifically for your discord s
 
 ## Technologies were used in this project:
 
-* [Python] (https://www.python.org /): a simple syntactic programming language;
-* [SQLite] (https://sqlite.org/index.html ): SQLite is a software library that provides a relational database management system. It is a serverless, self-contained SQL database engine with zero configuration and transactions. SQLite is widely used in various applications due to its compact size, low maintenance costs and ease of use;
-* [Discord Developer Portal] (https://discord.com/developers/applications ): website for registering your application;
-* [Discord.py ] (https://discord py.readthedocs.io/en/latest /): library for integration with discord;
+* [Python] (https://www.python.org): a simple syntactic programming language;
+* [SQLite] (https://sqlite.org/index.html): SQLite is a software library that provides a relational database management system. It is a serverless, self-contained SQL database engine with zero configuration and transactions. SQLite is widely used in various applications due to its compact size, low maintenance costs and ease of use;
+* [Discord Developer Portal] (https://discord.com/developers/applications): website for registering your application;
+* [Discord.py ] (https://discord py.readthedocs.io/en/latest): library for integration with discord;
 
 ## Requirement
 
@@ -35,25 +35,38 @@ setting = {
 }
 ```
 
-## GAMIFICAÇÃO
+## Bot system
 
-A gamificação do bot é feita através de 2 tipos, a xp e níveis, o xp é dividido em semanal e por canal, os níveis são calculados de forma geral;
+The bot system is implemented using 2 types, experience and levels, experience is accrued weekly, or for chatting.
 
-### XP
-
-O cálculo do xp vai seguir essas regras:
-* Por mensagem:
-  * Mínimo de 2 palavras;
-  * Máximo por mensagem, 40 pontos;
-  * Número de caracteres não repetidos / 3;
-* Reações a mensagens:
-  * Disponíveis em alguns canais;
-  * Badlist de emojis, remove pontos, 200 pontos, remove a reação;
-  * Goodlist de emojis, 5 emojis, 2x pontos, 100 pontos base;
-* Tempo de canais de voz:
-  * Conferir quais informações recebemos para avaliar os pontos
-* Compartilhamento de tela:
-  * Conferir quais informações recebemos para avaliar os pontos
+## Basic bot commands
+- `bot.bot_ready_event()`: Event triggered when the bot starts.
+- `bot.member_join_event()`: Event triggered when a new user joins the server.
+- `bot.balance_event()`: Event triggered to get a user's balance.
+- `bot.give_event()`: Event triggered to give money to a user.
+- `bot.remove_bal_event()`: Event triggered to remove money from a user.
+- `bot.info_event()`: Event triggered to get information about a user.
+- `bot.add_shop_event()`: Event triggered to add an item to the shop.
+- `bot.remove_shop_event()`: Event triggered to remove an item from the shop.
+- `bot.shop_event()`: Event triggered to view items in the shop.
+- `bot.buy_event()`: Event triggered to buy an item from the shop.
+- `bot.set_money_event()`: Event triggered to set a user's balance.
+- `bot.commands_error_event()`: Event triggered when an error occurs in a command.
+- `bot.clear_event()`: Event triggered to clear the chat.
+- `bot.inventory_event()`: Event triggered to view a user's inventory.
+- `bot.use_event()`: Event triggered to use an item from the inventory.
+- `bot.roll_event()`: Event triggered to roll a dice.
+- `bot.avatar_event()`: Event triggered to change a user's avatar.
+- `bot.collect_event(collecting_roles, 0, 0)`: Event triggered to collect funds from users with a specific role.
+- `bot.work_event(70000, 100000, text_work, 0, 0)`: Event triggered for a user to perform a job.
+- `bot.remove_all_inventory()`: Event triggered to remove all items from a user's inventory.
+- `bot.remove_all_balance()`: Event triggered to remove all money from a user.
+- `bot.remove_all_roles()`: Event triggered to remove all roles from a user.
+- `bot.wipe_event()`: Event triggered to wipe all bot data.
+- `bot.banner_event()`: Event triggered to set a banner on the server.
+- `bot.level_event()`: Event triggered to get a user's level.
+- `bot.on_message_event()`: Event triggered when a message is received on the server.
+- `bot.set_xp_event()`: Event triggered to set a user's experience.
 
 
 #### pymongo operações
