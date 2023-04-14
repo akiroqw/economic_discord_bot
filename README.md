@@ -1,4 +1,4 @@
-# Akiro DiscordBot
+# Economic_(akiroqw)Discord_Bot
 
 ## Introduction
 
