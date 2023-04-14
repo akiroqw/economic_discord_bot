@@ -1,4 +1,4 @@
-# Economic_(akiroqw)Discord_Bot
+# discord_bot
 
 ## Introduction
 
