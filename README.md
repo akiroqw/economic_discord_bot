@@ -25,6 +25,8 @@ $ git clone https://github.com/akiroqw/DiscordBot.git
 ```
 pip install -r requirements.txt
 ```
+
+## Usage
 * Create a new file .env in the src folder where the token, client id will be located
 ```py
 TOKEN = "" Bot Token
