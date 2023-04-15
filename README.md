@@ -20,10 +20,7 @@ A project in which an economic bot was developed specifically for your discord s
 ```
 $ git clone https://github.com/akiroqw/DiscordBot.git
 $ open a project in VS Code
-$ open the terminal and install the necessary libraries using:
-```
-```
-$ pip install -r requirements.txt
+$ open the terminal and install the necessary libraries using: pip install -r requirements.txt
 ```
 * Create a new file .env in the src folder where the token, client id will be located
 ```py
