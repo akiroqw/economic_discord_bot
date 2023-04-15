@@ -1,5 +1,3 @@
-# Discord Bot
-
 ## Introduction
 
 A project in which an economic bot was developed specifically for your discord server. It contains various functions for building an economy on your server.
@@ -21,9 +19,9 @@ A project in which an economic bot was developed specifically for your discord s
 * Clone repository
 ```
 $ git clone https://github.com/akiroqw/DiscordBot.git
-$ cd AkiroDiscordBot
+$ open a project in VS Code
+$ open the terminal and install the necessary libraries using:
 ```
-* Install the necessary libraries using the requirements.txt
 ```
 $ pip install -r requirements.txt
 ```
