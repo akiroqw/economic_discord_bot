@@ -4,7 +4,7 @@ A project in which an economic bot was developed specifically for your discord s
 
 ![Introduction](https://i.pinimg.com/originals/74/5c/c9/745cc90fcc688569610f84bc5d2b2fd6.gif)
 
-## Technologies were used in this project:
+## Technologies were used in this project
 
 * [Python] (https://www.python.org): a simple syntactic programming language;
 * [SQLite] (https://sqlite.org/index.html): SQLite is a software library that provides a relational database management system. It is a serverless, self-contained SQL database engine with zero configuration and transactions. SQLite is widely used in various applications due to its compact size, low maintenance costs and ease of use;
